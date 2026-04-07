@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singapore TOTO 选号助手</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Singapore TOTO 选号助手</h1>
+        <p>支持随机选号、热门冷门分析、胆拖（System Entry）与历史记录。</p>
+      </header>
+
+      <section class="card controls">
+        <div class="row">
+          <label for="entryType">投注类型</label>
+          <select id="entryType">
+            <option value="ordinary">Ordinary Entry（6个号码）</option>
+            <option value="system7">System 7（7个号码）</option>
+            <option value="system8">System 8（8个号码）</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="poolCount">生成注数</label>
+          <input id="poolCount" type="number" min="1" max="10" value="3" />
+        </div>
+
+        <div class="row">
+          <label for="luckyNumbers">幸运号（可选，逗号分隔）</label>
+          <input id="luckyNumbers" type="text" placeholder="例如：8,18,28" />
+        </div>
+
+        <div class="row button-row">
+          <button id="generateBtn">生成号码</button>
+          <button id="saveBtn" class="secondary">保存本次结果</button>
+          <button id="clearBtn" class="danger">清空历史</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>推荐号码</h2>
+        <div id="results" class="results empty">点击“生成号码”开始。</div>
+      </section>
+
+      <section class="card">
+        <h2>选号洞察</h2>
+        <ul id="insights"></ul>
+      </section>
+
+      <section class="card">
+        <h2>历史记录</h2>
+        <div id="history" class="results empty">暂无保存记录。</div>
+      </section>
+
+      <footer>
+        <small>
+          说明：本工具仅用于娱乐和选号辅助，不保证中奖。新加坡 TOTO 官方规则请以 Singapore Pools 公布为准。
+        </small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
